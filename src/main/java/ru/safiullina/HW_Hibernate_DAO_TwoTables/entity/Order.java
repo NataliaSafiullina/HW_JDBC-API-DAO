@@ -27,9 +27,6 @@ public class Order {
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
     private Customer customer; //`customer_id` INT UNSIGNED,
 
-    public Order() {
-    }
-
     public Order(Date date, String product_name, float amount, Customer customer) {
         this.date = date;
         this.product_name = product_name;
@@ -37,43 +34,4 @@ public class Order {
         this.customer = customer;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
-    }
-
-    public String getProduct_name() {
-        return product_name;
-    }
-
-    public void setProduct_name(String product_name) {
-        this.product_name = product_name;
-    }
-
-    public float getAmount() {
-        return amount;
-    }
-
-    public void setAmount(float amount) {
-        this.amount = amount;
-    }
-
-    public Customer getCustomer() {
-        return customer;
-    }
-
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
-    }
 }
