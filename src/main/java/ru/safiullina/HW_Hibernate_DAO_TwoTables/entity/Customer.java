@@ -14,20 +14,26 @@ import lombok.*;
 public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private int id; //`id`INT UNSIGNED NOT NULL AUTO_INCREMENT,
-    @Column(nullable = false)
+
+    @Column(name = "name", nullable = false)
     private String name; //`name` VARCHAR(255) NOT NULL,
-    @Column(nullable = false)
+
+    @Column(name = "surname", nullable = false)
     private String surname; //`surname` VARCHAR(255) NOT NULL,
-    @Column(nullable = false)
+
+    @Column(name = "age", nullable = false)
     private int age; //`age` INT NOT NULL CHECK (`age`>= 0),
-    private String phone_number; //`phone_number` VARCHAR(20),
+
+    @Column(name = "phone_number")
+    private String phoneNumber; //`phone_number` VARCHAR(20),
 
     public Customer(String name, String surname, int age, String phone_number) {
         this.name = name;
         this.surname = surname;
         this.age = age;
-        this.phone_number = phone_number;
+        this.phoneNumber = phone_number;
     }
 
 }

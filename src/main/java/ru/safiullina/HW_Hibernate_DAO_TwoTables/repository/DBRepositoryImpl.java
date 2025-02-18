@@ -34,7 +34,7 @@ public class DBRepositoryImpl implements DBRepository {
             addData();
         }
 
-        String queryString = "select product_name " +
+        String queryString = "select productName " +
                 "from Order " +
                 "where lower(customer.name) = lower(:name)";
 

@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>ru.safiullina</groupId>
-	<artifactId>HW_JDBC-API-DAO</artifactId>
+	<artifactId>HW_Hibernate-DAO-TwoTables</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>HW_JDBC-API-DAO</name>
-	<description>8.3. JDBC API, JdbcTemplate, NamedParametersJdbcTemplate</description>
+	<name>HW_Hibernate-DAO-TwoTables</name>
+	<description>8.4. ORM, Hibernate</description>
 	<url/>
 	<licenses>
 		<license/>

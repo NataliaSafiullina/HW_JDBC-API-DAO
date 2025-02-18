@@ -16,12 +16,16 @@ import java.util.Date;
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private int id; // `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-    @Column(nullable = false)
+
+    @Column(name = "date", nullable = false)
     private Date date; //`date` DATE NOT NULL,
-    @Column(nullable = false)
-    private String product_name; //`product_name` VARCHAR(255),
-    @Column(nullable = false, length = 9, precision = 2)
+
+    @Column(name = "product_name", nullable = false)
+    private String productName; //`product_name` VARCHAR(255),
+
+    @Column(name = "amount", nullable = false, length = 9, precision = 2)
     private float amount; //`amount` DECIMAL(9,2),
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
@@ -29,7 +33,7 @@ public class Order {
 
     public Order(Date date, String product_name, float amount, Customer customer) {
         this.date = date;
-        this.product_name = product_name;
+        this.productName = product_name;
         this.amount = amount;
         this.customer = customer;
     }
